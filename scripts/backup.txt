@@ -1,0 +1,110 @@
+- sudo systemctl stop apache2 &&
+  - sudo apt-get install -y nginx &&
+  - sudo cp extra/default /etc/nginx/sites-available/default &&
+  - sudo systemctl restart nginx &&
+
+
+
+sudo apt purge -y apache2
+
+sudo rm -f /etc/apache2/sites-available/default-ssl.conf
+
+sudo apt update && sudo apt upgrade -y
+
+sudo apt install lsb-release ca-certificates apt-transport-https apt-utils software-properties-common -y
+
+sudo add-apt-repository ppa:ondrej/php -y
+
+sudo add-apt-repository ppa:ondrej/apache2 -y
+
+sudo apt update -y
+
+# Install Apache2
+sudo apt install -y apache2
+
+# Allow Apache on start up
+sudo systemctl enable apache2
+
+# Adjust Firewall
+sudo ufw allow in "Apache Full"
+
+sudo ufw allow http
+
+sudo ufw allow https
+
+
+sudo apt purge -y nodejs
+
+curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash - && sudo apt-get install -y nodejs
+
+
+sudo npm install -g pm2
+
+sudo pm2 kill
+
+sudo -u jigga_e10 pm2 stop serve || echo "Serve script not running ..."
+
+sudo apt -y install wget unzip openssl git curl g++ make unixodbc-dev zip && rm -rf /var/lib/apt/lists/*
+
+# Install PHP
+sudo apt install -y php7.4 php7.4-zip php7.4-dev php-pear libapache2-mod-php7.4 php7.4-gmp php7.4-mysql php7.4-gd php7.4-xml php7.4-soap php7.4-mbstring php7.4-mysql php7.4-redis php7.4-curl php7.4-cli php7.4-zip php7.4-yaml php7.4-common php7.4-bcmath php7.4-json
+
+#Updating Write permission
+sudo chown -R jigga_e10 /etc/php/7.4/mods-available
+
+sudo chown -R root.root /etc/php/7.4/mods-available
+
+sudo phpenmod -v 7.4 curl simplexml
+
+sudo a2dismod mpm_event
+sudo a2enmod mpm_prefork
+sudo a2enmod rewrite
+sudo a2enmod php7.4
+
+sudo sed -i 's,^max_execution_time =.*$,max_execution_time = 300,' /etc/php/7.4/apache2/php.ini
+
+sudo a2enmod ssl
+
+sudo a2enmod rewrite
+
+sudo a2ensite kashmore-le-ssl.conf
+
+sudo snap install core
+
+sudo snap refresh core
+
+sudo snap install --classic certbot
+
+sudo ln -s /snap/bin/certbot /usr/bin/certbot
+
+domainName="kashmore.jiggabytehub.com"
+
+sudo certbot --apache -d "$domainName" -d "www.$domainName" -m jigga.e10@gmail.com --agree-tos -n
+
+sudo service apache2 restart
+
+# Test if Composer is installed
+sudo composer -v >/dev/null 2>&1
+composerInstalled=$?
+
+# True, if composer is not installed
+if [[ $composerInstalled -ne 0 ]]; then
+
+  # Install Composer
+  sudo curl -sS https://getcomposer.org/installer | php
+  sudo mv composer.phar /usr/local/bin/composer
+else
+
+ sudo composer self-update
+fi
+
+
+sudo touch /var/spool/cron/jigga_e10# /usr/bin/crontab /var/spool/cron/jigga_e10
+
+sudo echo "0 * * * * /var/www/html/kashmore/scripts/restarter.sh" >>/var/spool/cron/jigga_e10
+
+sudo echo "0 * * * * /var/www/html/kashmore/lib/socket/scan_restart.sh" >> /var/spool/cron/jigga_e10
+
+cd lib/socket
+
+bash start_server.sh

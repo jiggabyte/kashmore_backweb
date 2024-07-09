@@ -1,0 +1,1026 @@
+/*
+    DEMO STYLE
+*/
+
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #fafafa;
+    margin:3px;
+}
+
+.booker {
+    margin-top:20px;
+    margin-left:0px;
+}
+
+p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1em;
+    font-weight: 300;
+    line-height: 1.7em;
+    color: #000000;
+}
+
+a {
+    color: #000000!important;
+    text-decoration: none;
+    transition: all 0.3s;
+    z-index:4!important;
+}
+
+a:hover,
+a:focus {
+    color: #f3d427!important;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+
+.navbar {
+    padding: 15px 10px;
+    background: #fff;
+    border: none;
+    border-radius: 0;
+    margin-bottom: 40px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-btn {
+    box-shadow: none;
+    outline: none !important;
+    border: none;
+}
+
+.nav-item-link {
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+.nav-item-link:hover,
+.nav-item-link:focus {
+    color: #f3d427!important;
+    text-decoration: none;
+    transition: all 0.3s;
+    border-bottom: 2px solid yellow;
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px dashed #ddd;
+    margin: 40px 0;
+}
+
+/* ---------------------------------------------------
+    SIDEBAR STYLE
+----------------------------------------------------- */
+
+#sidebar {
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    height: 100vh;
+    z-index: 999;
+    background: #ffffff;
+    color: #000000;
+    font-weight: bold;
+    transition: all 0.3s;
+    overflow-y: scroll;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+}
+
+#sidebar.active {
+    left: 0;
+}
+
+#dismiss {
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    background: #000000;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+#dismiss:hover {
+    background: #fff;
+    color: #7386D5;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 998;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+.overlay.active {
+    display: block;
+    opacity: 1;
+}
+
+
+.sidebar-header {
+    padding: 20px;
+    background: #0B175F;
+}
+
+#sidebar ul.components {
+    padding: 20px 0;
+    border-top: 1px solid #47748b;
+    background-color: #ffffff;
+}
+
+#sidebar ul p {
+    color: #000000;
+    padding: 10px;
+    font-weight: bold;
+}
+
+#sidebar ul li a {
+    padding: 10px;
+    font-size: 1.1em;
+    display: block;
+}
+
+#sidebar ul li a:hover {
+    color: #000000;
+    background: #fff;
+}
+
+#sidebar ul li.active>a,
+a[aria-expanded="true"] {
+    color: #fff;
+    background: #ededed;
+}
+
+a[data-toggle="collapse"] {
+    position: relative;
+}
+
+.dropdown-toggle::after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+ul ul a {
+    font-size: 0.9em !important;
+    padding-left: 30px !important;
+    background: #6d7fcc;
+}
+
+ul.CTAs {
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+ul.CTAs a {
+    text-align: center;
+    font-size: 0.9em !important;
+    display: block;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+a.download {
+    background: #fff;
+    color: #7386D5;
+}
+
+a.article,
+a.article:hover {
+    background: #6d7fcc !important;
+    color: #fff !important;
+}
+
+.nav-link {
+    color:#FFFFFF!important;
+}
+
+#profilar {
+    color: #fff !important;
+}
+
+/* ---------------------------------------------------
+    CONTENT STYLE
+----------------------------------------------------- */
+
+#content {
+    width: 100%;
+    padding:0;
+    height: auto;
+    transition: all 0.3s;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+
+
+.nav-top {
+    position:fixed;
+    left:0;
+    top:0;
+    margin:0;
+    background-color: #0B175F;
+    width:100%;
+    z-index:4;
+}
+
+.spacer {
+    width:100%;
+    height:20px;
+}
+
+.logo-img {
+    width:70px;
+
+}
+
+.back-div {
+    position:absolute;
+    left:0;
+    top:0;
+    margin:0;
+    padding:30px;
+    width:100%;
+    height:500px;
+    z-index:1;
+
+}
+
+.map-back {
+    position:absolute;
+    right:15px;
+    top:10px;
+    font-weight:bold;
+    z-index:2;
+}
+
+.map-car {
+    position:absolute;
+    left:15px;
+    top:10px;
+    font-weight:bold;
+    z-index:2;
+}
+
+.map-val {
+    position:absolute;
+    left:50px;
+    top:15px;
+    font-size:1.5em;
+    z-index:2;
+}
+
+.map-spot {
+    position:absolute;
+    right:30px;
+    bottom:20px;
+    width:40px;
+    z-index:2;
+}
+
+.backia {
+    background-image: url("../img/drivin.jpg"); 
+    background-size:cover;
+    height:700px!important;
+}
+.overlay-bg {
+    position:absolute;
+    left:0;
+    top:0;
+    width: 100%;
+    height: 500px;
+    background-color:#000000;
+    z-index: 2;
+    opacity: 0.6;
+}
+
+.car-lay {
+    width:600px;
+    position:absolute;
+    right:40px;
+    top:270px;
+    z-index: 3;
+    -webkit-animation-name: car-anime; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+    animation-name: car-anime;
+    animation-duration: 4s;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes car-anime {
+    from {position:absolute;right:600px;}
+    to {position:absolute;right:40px;}
+}
+
+/* Standard syntax */
+@keyframes car-anime {
+    from {position:absolute;right:600px;}
+    to {position:absolute;right:40px;}
+
+}
+
+.use-info {
+    background-color:#0B175F;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.37), 0 6px 20px 0 rgba(0, 0, 0, 0.432);
+    color:white;
+    width:100%;
+    margin-left:10px;
+    margin-top:10%;
+    font-weight:bold;
+    padding:40px;
+    border-bottom-right-radius:50px;
+    border-top-left-radius:50px;
+    -webkit-animation-name: use-anime; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
+    animation-name: use-anime;
+    animation-duration: 1s;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes use-anime {
+    from {margin-left:100%;transform:rotate(25deg);}
+    to {margin-left:-10%;transform:rotate(0deg);}
+}
+
+/* Standard syntax */
+@keyframes use-anime {
+    from {margin-left:100%;transform:rotate(25deg);}
+    to {margin-left:-10%;transform:rotate(0deg);}
+}
+
+.decision-layer {
+    background-color:#ffffff;
+    width:70%;
+    margin-left:20%;
+    margin-top:10%;
+    font-weight:bold;
+    padding:40px;
+    box-shadow: 10px 10px 5px grey;
+    -webkit-animation-name: des-anime; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 2s; /* Safari 4.0 - 8.0 */
+    animation-name: des-anime;
+    animation-duration: 2s;
+}
+
+.decision-lay {
+    background-color:#ffffff;
+    width:70%;
+    margin-left:20%;
+    margin-top:10%;
+    font-weight:bold;
+    padding:40px;
+    box-shadow: 10px 10px 5px grey;
+    border-bottom-right-radius:50px;
+    border-top-left-radius:50px;
+    -webkit-animation-name: des-anime; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 2s; /* Safari 4.0 - 8.0 */
+    animation-name: des-anime;
+    animation-duration: 2s;
+}
+
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes des-anime {
+    from {margin-top:100%;transform:rotate(25deg);}
+    to {margin-top:5%;transform:rotate(0deg);}
+}
+
+/* Standard syntax */
+@keyframes des-anime {
+    from {margin-top:100%;transform:rotate(25deg);}
+    to {margin-top:5%;transform:rotate(0deg);}
+}
+
+.contact-card {
+    position:absolute;
+    left:20px;
+    top:120px;
+    z-index: 3;
+ }
+
+ .contact-card h1 {
+    color:rgb(245, 233, 51);
+}
+
+.contact-card p {
+    margin-left:20px;
+    padding-left:4px;
+    padding-right:4px;
+    background-color:transparent;
+    color:rgb(245, 233, 51);
+    float:right;
+    border-radius: 3px;
+    font-size: 1.2em;
+    font-weight:bold;
+}
+
+.contact-layor {
+    position:absolute;
+    left:10px;
+    top:20px;
+    width:90%;
+    z-index: 3;
+}
+.abt {
+     margin-top:20px;
+ }
+.contact-lay {
+    margin:170px auto;
+    width:auto;
+    z-index: 3;
+}
+
+
+.contact-lay h1 {
+    color:#ffffff;
+}
+
+.contact-lay p {
+    color:#ffffff;
+}
+
+#cahierTaxi {
+    margin:0 auto;
+    width:560px;
+    height:90px;
+    padding:0;
+}
+
+#cahierTaxis {
+    margin:0 auto;
+    width:480px;
+    height:90px;
+    padding:0;
+}
+
+#cahierTaxisa {
+    margin:0 auto;
+    width:620px;
+    padding:0;
+    display:block;
+}
+
+#bookTaxi {
+    z-index: 6;
+    white-space: nowrap;
+    font-size: 90px;
+    line-height: 90px;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    letter-spacing: -2px;
+    font-family: Poppins;
+    visibility: inherit;
+    transition: none 0s ease 0s;
+    text-align: center;
+    border-width: 0px;
+    margin: 0px;
+    padding: 0px;
+    min-height: 0px;
+    min-width: 0px;
+    max-height: none;
+    max-width: auto;
+    filter: blur(0px);
+    opacity: 1;
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform-origin: 50% 50% 0px;
+}
+
+.book-p {
+    z-index: 7;
+    white-space: nowrap;
+    font-size: 25px;
+    line-height: 30px;
+    font-weight: 500;
+    color: rgb(245, 233, 51)!important;
+    letter-spacing: -1px;
+    font-family: Poppins;
+    visibility: inherit;
+    transition: none 0s ease 0s;
+    text-align: center;
+    border-width: 0px;
+    margin: 0px;
+    padding: 0px;
+    min-height: 0px;
+    min-width: 0px;
+    max-height: none;
+    max-width: none;
+    filter: blur(0px);
+    opacity: 1;
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform-origin: 50% 50% 0px;
+}
+
+.book-b {
+    font-weight:bold;
+    font-size:1.5em;
+}
+
+.text-lay {
+    position:absolute;
+    left:100px;
+    top:230px;
+    z-index: 3;
+}
+
+.text-lay h1 {
+    color:#ffffff;
+}
+
+.text-lay p {
+    color:#ffffff;
+}
+
+.active {
+    color: #ffffff!important;
+}
+
+.service-div {
+    margin-top:500px;
+    background-color: transparent;
+    height:auto;
+}
+
+.dload {
+    margin-left:320px;
+}
+
+#cloadX {
+    display: flex;
+    flex-direction: row;
+    transition: none 0s ease 0s;
+    text-align: inherit;
+    line-height: 16px;
+    border-width: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0px;
+    width:600px;
+    letter-spacing: 0px;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.cload-android {
+    display: block;
+    transition: none 0s ease 0s;
+    text-align: inherit;
+    line-height: 16px;
+    border-width: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    width:300px;
+    padding: 0px;
+    letter-spacing: 0px;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.cload-ios {
+    display: block;
+    transition: none 0s ease 0s;
+    text-align: inherit;
+    line-height: 16px;
+    border-width: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    width:300px;
+    padding: 0px;
+    letter-spacing: 0px;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.row-head {
+    width:100%;
+    margin-left: auto;
+    margin-right: auto;
+    display:block;
+}
+
+.mobile-png {
+    margin-top:80px;
+    width:100%;
+}
+
+.footer-div {
+    margin-top:0px;
+    padding:20px;
+    color:#ffffff;
+    background-color: #000000;
+    width:100%;
+    height: auto;
+}
+
+.footer-div h1 {
+    color:#ffc246;
+}
+
+.footer-div h6 {
+    color:#ffc246;
+}
+
+.footer-div p {
+    color:#ffffff!important;
+    font-size:0.9em;
+    font-weight:bold;
+}
+
+.footer-div a {
+    color:#ffffff!important;
+    font-size:0.9em;
+}
+
+.footer-div a:hover {
+    color:#ffc246!important;
+    font-size:0.9em;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+.hider {
+    display: none;
+}
+
+.preloader-first {
+    width:150px;
+    margin:25% auto;
+    display:block;
+}
+
+.login-reg {
+    position: absolute;
+    right:40px;
+    top:150px;
+    z-index: 5;
+}
+
+.login-side-reg {
+    margin-top:40px;
+    z-index: 5;
+}
+
+.profile-r {
+    background-color: #ededed;
+    color:white;
+    margin-top:-20px;
+    border-radius:5px;
+}
+
+.profila-r {
+    background-color: #ededed;
+    color:white;
+    margin-top:-20px;
+    height:40px;
+    border-radius:5px;
+}
+.map-header {
+    width:100%;
+    height:100px;
+}
+
+#map {
+    width:100%;
+    height:100%;
+}
+
+.map-sd {
+    width:100%;
+    height:60vh;
+}
+
+.map-div {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 5px;
+    margin-left:0;
+    margin-right:0;
+}
+
+.booker-div {
+    margin-top:10px;
+}
+
+.searchButton {
+    background-color:#ffff00;
+}
+
+.bookButton {
+    background-color:#1100ff;
+    color:#ffffff;
+}
+
+a[href^="http://maps.google.com/maps"],
+a[href^="https://maps.google.com/maps"],
+a[href^="https://www.google.com/maps"] {
+    display: none !important;
+}
+.gm-bundled-control .gmnoprint {
+    display: block;
+}
+.gmnoprint:not(.gm-bundled-control) {
+    display: none;
+}
+
+@media screen and (max-width: 800px){
+    .back-div {
+        position:absolute;
+        left:0;
+        top:0;
+        margin:0;
+        padding:30px;
+        width:100%;
+        height:700px;
+        z-index:1;
+
+    }
+
+    .overlay-bg {
+        position:absolute;
+        left:0;
+        top:0;
+        width: 100%;
+        height: 700px;
+        background-color:#000000;
+        z-index: 2;
+        opacity: 0.8;
+    }
+
+    .car-lay {
+        width:300px;
+        position:absolute;
+        right:40px;
+        top:500px;
+        z-index: 3;
+
+    }
+
+    .dload {
+        margin-left:20px;
+    }
+
+    #cloadX {
+        display: flex;
+        flex-direction: row;
+        transition: none 0s ease 0s;
+        text-align: inherit;
+        line-height: 16px;
+        border-width: 0px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0px;
+        width:270px;
+        letter-spacing: 0px;
+        font-weight: 400;
+        font-size: 15px;
+    }
+
+    .cload-android {
+        display: block;
+        transition: none 0s ease 0s;
+        text-align: inherit;
+        line-height: 16px;
+        border-width: 0px;
+        margin-left: auto;
+        margin-right: auto;
+        width:135px;
+        padding: 0px;
+        letter-spacing: 0px;
+        font-weight: 400;
+        font-size: 15px;
+    }
+
+    .cload-ios {
+        display: block;
+        transition: none 0s ease 0s;
+        text-align: inherit;
+        line-height: 16px;
+        border-width: 0px;
+        margin-left: auto;
+        margin-right: auto;
+        width:135px;
+        padding: 0px;
+        letter-spacing: 0px;
+        font-weight: 400;
+        font-size: 15px;
+    }
+
+    .profile-r {
+        background-color: #ededed;
+        color:white;
+        margin-top:-20px;
+        border-radius:5px;
+    }
+
+    .contact-card {
+        position:absolute;
+        left:3px;
+        top:200px;
+        z-index: 3;
+     }
+
+     .contact-card h1 {
+        color:rgb(245, 233, 51);
+    }
+
+    .contact-card p {
+        margin-left:20px;
+        padding-left:4px;
+        padding-right:4px;
+        background-color: transparent;
+        color:rgb(245, 233, 51);
+        float:right;
+        width:50px;
+        border-radius: 3px;
+        font-size: 1.2em;
+        font-weight:bold;
+    }
+
+    .infoEmail {
+        display:none;
+    }
+
+    .infoNumber {
+        display:none;
+    }
+
+    #cahierTaxi {
+        margin:0 auto;
+        width:300px;
+        height:45px;
+        padding:0;
+    }
+
+    #cahierTaxis {
+        margin:0 auto;
+        width:260px;
+        height:45px;
+        padding:0;
+    }
+
+    #cahierTaxisa {
+        margin:0 auto;
+        width:280px;
+        padding:0;
+        display:block;
+    }
+
+    #bookTaxi {
+        z-index: 6;
+    white-space: nowrap;
+    font-size: 50px;
+    line-height: 50px;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    letter-spacing: -2px;
+    font-family: Poppins;
+    visibility: inherit;
+    transition: none 0s ease 0s;
+    text-align: center;
+    border-width: 0px;
+    margin: 0px;
+    padding: 0px;
+    min-height: 0px;
+    min-width: 0px;
+    max-height: none;
+    max-width: auto;
+    filter: blur(0px);
+    opacity: 1;
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transform-origin: 50% 50% 0px;
+    }
+
+
+    .book-p {
+        z-index: 7;
+        white-space: nowrap;
+        font-size: 14px;
+        line-height: 30px;
+        font-weight: 500;
+        color: rgb(245, 233, 51)!important;
+        letter-spacing: -1px;
+        font-family: Poppins;
+        visibility: inherit;
+        transition: none 0s ease 0s;
+        text-align: center;
+        border-width: 0px;
+        margin: 0px;
+        padding: 0px;
+        min-height: 0px;
+        min-width: 0px;
+        max-height: none;
+        max-width: none;
+        filter: blur(0px);
+        opacity: 1;
+        transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        transform-origin: 50% 50% 0px;
+    }
+    .contact-lay {
+        margin:300px auto;
+        width:auto;
+        z-index: 3;
+    }
+
+
+    .contact-lay h1 {
+        color:#ffffff;
+    }
+
+    .contact-lay p {
+        color:#ffffff;
+    }
+
+    .text-lay {
+        position:absolute;
+        left:50px;
+        top:200px;
+        z-index: 3;
+    }
+
+    .text-lay h1 {
+        color:#ffffff;
+    }
+
+    .text-lay p {
+        color:#ffffff;
+    }
+
+    .service-div {
+        margin-top:700px;
+        background-color: transparent;
+        width:100%;
+
+    }
+
+    .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+    .backia {
+        background-image: url("../img/drivin_mob.jpg");
+        background-size:cover;
+        height:700px!important;
+    }
+
+    .row-head {
+        width:100%;
+        margin-left: auto;
+        margin-right: auto;
+        display:block;
+    }
+
+    .mobile-png {
+        margin-top:-150px;
+        width:100%;
+    }
+
+    .abt {
+        margin-top:200px;
+    }
+
+    .footer-div {
+        margin-top:0px;
+        padding:20px;
+        color:#ffffff;
+        background-color: #161616;
+        width:100%;
+        height: auto;
+    }
+
+    .footer-div h1 {
+        color:#ffc246;
+    }
+
+    #footerDiv {
+        width:100%;
+        height: auto;
+        z-index: 2;
+    }
+
+
+
+
+}

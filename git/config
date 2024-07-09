@@ -1,0 +1,19 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+[remote "origin"]
+	url = https://github.com/JiggaByter/kashmore_web.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "master"]
+	remote = origin
+	merge = refs/heads/master
+[remote "jiggy"]
+	url = https://github.com/jiggabytehub/kashmore_web
+	fetch = +refs/heads/*:refs/remotes/jiggy/*
+[remote "kash-origin"]
+	url = https://github.com/jiggabyte/kashmore_backweb.git
+	fetch = +refs/heads/*:refs/remotes/kash-origin/*
+[branch "main"]
+	vscode-merge-base = origin/master
